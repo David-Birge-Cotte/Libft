@@ -6,7 +6,7 @@
 #    By: dbirge-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 12:44:54 by dbirge-c          #+#    #+#              #
-#    Updated: 2017/11/14 11:49:44 by dbirge-c         ###   ########.fr        #
+#    Updated: 2017/12/06 13:19:09 by dbirge-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC_FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
 			ft_lstmap.c \
 			ft_isupper.c ft_islower.c ft_abs.c ft_sqrt.c ft_lstlexinsert.c \
-			ft_lstaddend.c ft_list_size.c
+			ft_lstaddend.c ft_lstsize.c
 FLAGS = -Wall -Wextra -Werror
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

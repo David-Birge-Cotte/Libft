@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_size.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbirge-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 14:39:25 by dbirge-c          #+#    #+#             */
-/*   Updated: 2017/11/14 11:58:41 by dbirge-c         ###   ########.fr       */
+/*   Created: 2017/12/06 13:17:50 by dbirge-c          #+#    #+#             */
+/*   Updated: 2017/12/06 13:18:27 by dbirge-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Retourne la taille de la liste.
+** Retourne la taille de la liste a partir de la tete donnee en parametre.
 */
 
 #include "libft.h"
