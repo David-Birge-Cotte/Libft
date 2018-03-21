@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 /*
 ** Alloue (avec malloc(3)) et retourne un tableau de chaines de
@@ -26,7 +27,7 @@ static char		*get_next_chunk(char const *s, char c)
 	int		i;
 
 	i = 0;
-	while (s[i] != c)
+	while (s[i] && s[i] != c)
 		i++;
 	return (ft_strsub(s, 0, i));
 }

@@ -22,6 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	size_t	i;
+	size_t	s1_l;
+	size_t	s2_l;
 
 	i = 0;
 	if (!s1 && s2)
@@ -30,14 +32,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup(s1));
 	else if (!s1 && !s2)
 		return (NULL);
-	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+	s1_l = ft_strlen(s1);
+	s2_l = ft_strlen(s2);
+	if (!(str = ft_strnew(s1_l + s2_l)))
 		return (NULL);
-	while (i < (ft_strlen(s1) + ft_strlen(s2)))
+	while (i < (s1_l + s2_l))
 	{
-		if (i < ft_strlen(s1))
+		if (i < s1_l)
 			str[i] = s1[i];
 		else
-			str[i] = s2[i - ft_strlen(s1)];
+			str[i] = s2[i - s1_l];
 		i++;
 	}
 	return (str);
