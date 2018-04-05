@@ -6,7 +6,7 @@
 /*   By: dbirge-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:02:52 by dbirge-c          #+#    #+#             */
-/*   Updated: 2017/12/06 13:18:52 by dbirge-c         ###   ########.fr       */
+/*   Updated: 2017/12/12 11:32:19 by dbirge-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include "get_next_line.h"
 
 typedef struct		s_list
 {
@@ -88,5 +89,7 @@ long				ft_abs(int n);
 int					ft_sqrt(int n);
 void				ft_lstlexinsert(t_list **begin, t_list *new);
 void				ft_lstaddend(t_list **alst, t_list *new);
-size_t				ft_lstsize(t_list *begin);
+size_t				ft_list_size(t_list *begin);
+int					ft_tablen(char **tab);
+void				ft_swap(void *a, void *b);
 #endif

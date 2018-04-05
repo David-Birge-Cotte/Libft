@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbirge-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 11:46:34 by dbirge-c          #+#    #+#             */
-/*   Updated: 2017/11/08 11:46:34 by dbirge-c         ###   ########.fr       */
+/*   Created: 2018/04/05 10:30:00 by dbirge-c          #+#    #+#             */
+/*   Updated: 2018/04/05 10:30:02 by dbirge-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** ft_tablen(char **tab)
+** takes an array of char* finished by a NULL (0)
+** returns -1 when the tab is not malloc
+** returns 0 when the tab is empty
+** returns the numbers of elements in the tab
+*/
+
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_tablen(char **tab)
 {
-	long	nb;
-	int		i;
-	int		floor_neg;
+	size_t	l;
 
-	nb = 0;
-	i = 0;
-	floor_neg = 1;
-	if (str == NULL)
-		return (0);
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
-	{
-		floor_neg = -1;
-		i++;
-	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		nb = (nb * 10) + (str[i] - 48);
-		i++;
-	}
-	nb *= floor_neg;
-	return ((int)nb);
+	l = 0;
+	if (tab == NULL)
+		return (-1);
+	while (tab[l] != 0)
+		l++;
+	return (l);
 }
